@@ -5,19 +5,29 @@ $white: #ffffff;
 $placeholder-text-color: #999999; 
 $main-text-color: #E8E8E8; 
 $secondary-text-color: #FEFEFE; 
+$hover-color: #5474FD; 
 
 body {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: $white;
+    overflow-x: hidden;
 }
 
 .header {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.header__section {
+    width: 100%;
     box-sizing: border-box;
-    margin: 15px 15px 0 15px;
+    margin: 20px 20px 0 20px;
     background-image: url(../images/header-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -25,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+    overflow-x: hidden;
 }
 
 .header__container {
@@ -71,6 +81,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    @media screen and (max-width: 690px) {
+        flex-direction: column;
+    }
 }
 
 .searchbar__text {
@@ -82,7 +95,7 @@ body {
     font-family: $main-font;
     color: black;
     text-align: center;
-    >:placeholder-shown {
+    :placeholder-shown {
         font-family: $main-font;
         color: $placeholder-text-color;
         font-size: 14px;
@@ -90,13 +103,17 @@ body {
         letter-spacing: 2.8px;
         text-align: center;
     }
+    @media screen and (max-width: 690px) {
+        box-sizing: border-box;
+        margin: 0 20px 20px 20px;  
+    }
 }
 
 .searchbar__button {
     max-width: 153px;
     width: 100%;
     height: 63px;
-    background-color: #5474FD;
+    background-color: $hover-color;
     color: $white;
     font-family: $secondary-font;
     font-size: 14px;
@@ -105,6 +122,10 @@ body {
     border: 2px solid $white;
     margin-right: 5px;
     &:hover {
+        background-color: $placeholder-text-color;
+        text-decoration: underline;
+    }
+    &:focus {
         background-color: $placeholder-text-color;
         text-decoration: underline;
     }
@@ -131,14 +152,33 @@ body {
 
 .nav {
     width: 100%;
+    box-sizing: border-box;
     background-color: #5474FD;
+    margin: 0 20px;
 }
 
 .nav__container {
+    max-width: 1173px;
+    width: 100%;
+    min-height: 83px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.nav__top {
+    width: 100%;
+    min-height: 83px;
+    box-sizing: border-box;
+    margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 83px;
+    @media screen and (max-width: 690px) {
+        flex-direction: column;
+    }
 }
 
 .nav__logo {
@@ -149,6 +189,9 @@ body {
     letter-spacing: 2.4px;
     color: $white;
     margin-left: 10px;
+    @media screen and (max-width: 690px) {
+        margin-top: 10px;
+    }
 }
 
 .nav__list>ul {
@@ -173,14 +216,19 @@ body {
     }
 }
 
-.main {
+.main { 
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .choose {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 15px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-image: url(../images/choose-us-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -188,6 +236,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    overflow-x: hidden;
 }
 
 .choose__container {
@@ -238,13 +287,26 @@ body {
     font-family: $secondary-font;
     line-height: 1.6;
     letter-spacing: 1.2px;
-    
+    &:hover {
+        background-image: none;
+        background-color: $placeholder-text-color;
+        text-decoration: underline;
+    }
+    &:focus {
+        background-color: $placeholder-text-color;
+        text-decoration: underline;
+    }  
+}
+
+.choose_pics {
+    margin-left: 50px;
 }
 
 .pic-1 {
     max-width: 350px;
     width: 100%;
     margin-bottom: 10px;
+    margin-left: -10px;
     img {
         width: 100%;
     }
@@ -253,6 +315,7 @@ body {
 .pic-2 {
     max-width: 350px;
     width: 100%;
+    margin-left: 50px;
     img {
         width: 100%;
     }
@@ -261,7 +324,7 @@ body {
 .how-it-works {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 15px 0 15px;
+    margin: 0 20px;
     background-color: #333333;
     background-position: center;
     background-repeat: no-repeat;
@@ -269,7 +332,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+    overflow-x: hidden;
 }
 
 .how-it-works__container {
@@ -286,12 +349,23 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    img {
+        width: 100%;
+    }
 }
+
+.travel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; 
+}
+
 .travel-top {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 15px 0 15px;
+    margin: 0 20px;
     background-image: url(../images/section-1-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -299,7 +373,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+    overflow-x: hidden;
 }
 
 .travel-top__container {
@@ -352,7 +426,7 @@ body {
     }
 
     button {
-        border: 0.5px solid #5474FD;
+        border: 0.5px solid $hover-color;
         background-image: url(../images/button-bg-2.svg);
         max-width: 228px;
         width: 100%;
@@ -364,13 +438,23 @@ body {
         font-family: $secondary-font;
         line-height: 1.6;
         letter-spacing: 1.2px;
+        &:hover {
+            background-image: none;
+            background-color: $placeholder-text-color;
+            text-decoration: underline;
+        }
+        &:focus {
+            background-image: none;
+            background-color: $placeholder-text-color;
+            text-decoration: underline;
+        }
     }
 }
 
 .travel-bottom {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 15px 0 15px;
+    margin: 0 20px;
     background-image: url(../images/section-2-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -378,7 +462,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+    overflow-x: hidden;
 }
 
 .travel-bottom__container {
@@ -431,7 +515,7 @@ body {
     }
 
     button {
-        border: 0.5px solid #5474FD;
+        border: 0.5px solid $hover-color;
         background-image: url(../images/button-bg-2.svg);
         max-width: 228px;
         width: 100%;
@@ -443,13 +527,24 @@ body {
         font-family: $secondary-font;
         line-height: 1.6;
         letter-spacing: 1.2px;
+        &:hover {
+            background-image: none;
+            background-color: $placeholder-text-color;
+            text-decoration: underline;
+        }
+        &:focus {
+            background-image: none;
+            background-color: $placeholder-text-color;
+            text-decoration: underline;
+        }
     }
 }
 
 .testimonial {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 15px 0 15px;
+    margin-right: 20px;
+    margin-left: 20px;
     background-image: url(../images/testimonial-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -457,7 +552,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+    overflow-x: hidden;
 }
 
 .testimonial__container {
@@ -485,6 +580,11 @@ body {
 
 .testimonial__info {
     display: inline-flex;
+    @media screen and (max-width:900px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
 }
 
 .testimonial__profile {
@@ -499,7 +599,7 @@ body {
 .testimonial__text {
     max-width: 668px;
     width: 100%;
-    height: 287px;
+    min-height: 287px;
     background-color: #333333;
     display: flex;
     justify-content: center;
@@ -514,7 +614,7 @@ body {
     }
 
     .fa-quote-left {
-        color: #5474FD;
+        color: $hover-color;
         font-size: 35px;
     }
 
@@ -531,7 +631,20 @@ body {
 
 .footer {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer__section {
+    width: 100%;
     background-color: #000000;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 20px 20px 20px;
+    overflow-x: hidden;
 }
 
 .footer__container {
@@ -585,7 +698,10 @@ body {
     line-height: 1.6;
     letter-spacing: 1.6px;
     &:hover {
-        color: #5474FD;
+        color: $hover-color;
+    }
+    &:focus {
+        color: $hover-color;
     }
 
 }

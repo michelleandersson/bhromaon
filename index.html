@@ -12,45 +12,49 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__container">
-            <div class="header__top">
-                <div class="header__logo">
-                    <h1>BHROMAON</h1>
-                    <h2>Safe Travel Anywhere</h2>
-                </div>
-                <div class="header__search">
-                    <form class="searchbar" action="">
-                        <input class="searchbar__text" type="text" placeholder="Search Your Travel Destination" name="search">
-                        <button class="searchbar__button" type="submit">
-                            Search
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-                <div class="header__scroll">
-                    <a href="#testimonial">
-                        Scroll Down <br>
-                        <i class="fas fa-chevron-down"></i>
-                    </a>
+        <section class="header__section">
+            <div class="header__container">
+                <div class="header__top">
+                    <div class="header__logo">
+                        <h1>BHROMAON</h1>
+                        <h2>Safe Travel Anywhere</h2>
+                    </div>
+                    <div class="header__search">
+                        <form class="searchbar" action="">
+                            <input class="searchbar__text" type="text" placeholder="Search Your Travel Destination" minlength="3" name="search">
+                            <button class="searchbar__button" type="submit">
+                                Search
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header__scroll">
+                        <a href="#testimonial">
+                            Scroll Down <br>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <nav class="nav">
-                <div class="nav__container">
-                    <div class="nav__logo">
-                        <h3>BHROMAON</h3>
-                    </div>
-                    <div class="nav__list">
-                        <ul>
-                            <li><a class="nav__link" hred="#">WHO WE ARE</a></li>
-                            <li><a class="nav__link" hred="#">WHAT WE DO</a></li>
-                            <li><a class="nav__link" hred="#">TRAVEL WITH US</a></li>
-                            <li><a class="nav__link" hred="#">CONTACT US</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+        </section>
     </header>
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__top">
+                <div class="nav__logo">
+                    <h3>BHROMAON</h3>
+                </div>
+                <div class="nav__list">
+                    <ul>
+                        <li><a class="nav__link" hred="#">WHO WE ARE</a></li>
+                        <li><a class="nav__link" hred="#">WHAT WE DO</a></li>
+                        <li><a class="nav__link" hred="#">TRAVEL WITH US</a></li>
+                        <li><a class="nav__link" hred="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
     <main class="main">
         <section class="choose"><!--why-choose-us-->
             <div class="choose__container">
@@ -82,7 +86,7 @@
                 </div>
             </div>
         </section><!--how-it-works-->
-        <section><!--section-->
+        <section class="travel"><!--section-->
             <div class="travel-top"><!--travel-top-->
                 <div class="travel-top__container">
                     <div class="travel-top__top">
@@ -129,6 +133,7 @@
         </section><!--testimonial-->
     </main>
     <footer class="footer">
+        <section class="footer__section">
             <div class="footer__container">
                 <div class="footer__top">
                     <div class="footer__logo">
@@ -136,14 +141,15 @@
                         <h3>Safe Travel Anywhere</h3>
                     </div>
                     <div class="footer__media">
-                        <i class="fab fa-facebook-f media-logo"></i>
-                        <i class="fab fa-twitter media-logo"></i>
-                        <i class="fab fa-linkedin-in media-logo"></i>
-                        <i class="fab fa-youtube media-logo"></i>
-                        <i class="fab fa-pinterest media-logo"></i>
+                        <a href="#"><i class="fab fa-facebook-f media-logo"></i></a>
+                        <a href="#"><i class="fab fa-twitter media-logo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in media-logo"></i></a>
+                        <a href="#"><i class="fab fa-youtube media-logo"></i></a>
+                        <a href="#"><i class="fab fa-pinterest media-logo"></i></a>
                     </div>
                 </div>
             </div>
+        </section>
     </footer>  
 </body>
 </html>
