@@ -254,24 +254,38 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 440px) {
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
 }
 
 .choose__text {
     max-width: 560px;
     width: 100%;
-    >h2 {
+    h2 {
         font-family: $secondary-font;
         font-size: 36px;
         color: $white;
         line-height: 0.7;
     }
-    >p {
+    p {
         margin-top: 50px;
         font-family: $main-font;
         color: $main-text-color;
         font-size: 16px;
         line-height: 1.6;
         letter-spacing: 1.6;
+    }
+
+    @media screen and (max-width: 440px) {
+        h2 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14px;
+        }
     }
 }
 
@@ -300,6 +314,9 @@ body {
 
 .choose_pics {
     margin-left: 50px;
+    @media screen and (max-width: 440px) {
+        margin-top: 20px;
+    }
 }
 
 .pic-1 {
