@@ -73,6 +73,15 @@ body {
         letter-spacing: 6.82px;
         padding-top: 15px;  
     }
+    @media screen and (max-width: 400px) {
+        h1 {
+            font-size: 35px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+    }
 }
 
 .searchbar{
@@ -178,6 +187,7 @@ body {
     align-items: center;
     @media screen and (max-width: 690px) {
         flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
@@ -191,6 +201,9 @@ body {
     margin-left: 10px;
     @media screen and (max-width: 690px) {
         margin-top: 10px;
+    }
+    @media screen and (max-width: 360px) {
+        font-size: 18px;
     }
 }
 
@@ -213,6 +226,10 @@ body {
         color: $placeholder-text-color;
         text-decoration: underline;
         cursor: pointer;
+    }
+    @media screen and (max-width: 360px) {
+        font-size: 12px;
+        flex-wrap: wrap;
     }
 }
 
