@@ -13,27 +13,41 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <div class="header__logo">
-                <h1>BHROMAON</h1>
-                <h2>Safe Travel Anywhere</h2>
+            <div class="header__top">
+                <div class="header__logo">
+                    <h1>BHROMAON</h1>
+                    <h2>Safe Travel Anywhere</h2>
+                </div>
+                <div class="header__search">
+                    <form class="searchbar" action="">
+                        <input class="searchbar__text" type="text" placeholder="Search Your Travel Destination" name="search">
+                        <button class="searchbar__button" type="submit">
+                            Search
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="header__scroll">
+                    <a href="#testimonial">
+                        Scroll Down <br>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
             </div>
-            <div class="header__search">
-                <form class="searchbar" action="">
-                    <input class="searchbar__text" type="text" placeholder="Search Your Travel Destination" name="search">
-                    <button class="searchbar__button" type="submit">
-                        Search
-                        <i class="fas fa-search"></i>
-                    </button>
-                  </form>
-            </div>
-            <div class="header__scroll">
-                <a href="#">
-                    Scroll Down <br>
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
-            <nav>
-
+            <nav class="nav">
+                <div class="nav__container">
+                    <div class="nav__logo">
+                        <h3>BHROMAON</h3>
+                    </div>
+                    <div class="nav__list">
+                        <ul>
+                            <li><a class="nav__link" hred="#">WHO WE ARE</a></li>
+                            <li><a class="nav__link" hred="#">WHAT WE DO</a></li>
+                            <li><a class="nav__link" hred="#">TRAVEL WITH US</a></li>
+                            <li><a class="nav__link" hred="#">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -53,7 +67,7 @@
             </div><!--group-2-->
 
         </section><!--section-->
-        <section><!--testimonial-->
+        <section id="testimonial"><!--testimonial-->
 
         </section><!--testimonial-->
     </main>
