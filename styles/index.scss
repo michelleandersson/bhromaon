@@ -507,7 +507,11 @@ body {
             background-color: $placeholder-text-color;
             text-decoration: underline;
         }
+        @media screen and (max-width: 360px) {
+            width: 170px;
+        }
     }
+    
 }
 
 .travel-bottom {
@@ -596,6 +600,9 @@ body {
             background-image: none;
             background-color: $placeholder-text-color;
             text-decoration: underline;
+        }
+        @media screen and (max-width: 360px) {
+            width: 170px;
         }
     }
 }
